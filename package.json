@@ -1,0 +1,22 @@
+{
+  "name": "currents2021",
+  "version": "1.0.0",
+  "description": "Official Code for Currents 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantum-jo/Currents2021.git"
+  },
+  "author": "Currents2021",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quantum-jo/Currents2021/issues"
+  },
+  "homepage": "https://github.com/quantum-jo/Currents2021#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
