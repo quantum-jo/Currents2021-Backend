@@ -13,11 +13,11 @@ Portal Link: www.currents.nitt.edu
 #### How to Run
 - For dev work 
 ```   
-    $ npm dev
+    $ npm run dev
 ```
 - For production 
 ```
-    $ npm start
+    $ npm run start
 ```
 
 #### File Structure
