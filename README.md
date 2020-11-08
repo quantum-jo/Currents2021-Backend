@@ -6,14 +6,19 @@ Portal Link: www.currents.nitt.edu
 #### Installation
 - Clone / Download this repository.
 - Install dependencies using 
-
+```
     $ npm install
+```
 
 #### How to Run
 - For dev work 
+```   
     $ npm dev
+```
 - For production 
+```
     $ npm start
+```
 
 #### File Structure
 - The project is divided into backend and frontend folders.
