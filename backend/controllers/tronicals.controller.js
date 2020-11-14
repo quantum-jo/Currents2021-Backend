@@ -13,7 +13,7 @@ exports.findAll = async (req, res) => {
 //Returns the detail of a tronical
 exports.findOne = async(req, res) => {
     try {
-        const tronical = await Tronicals.findById(req.params.Id);
+        const tronical = await Tronicals.find({name: req.params['title']});
         if(tronical)
         res.status(200).json(tronical);
 
