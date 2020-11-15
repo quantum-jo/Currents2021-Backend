@@ -6,6 +6,6 @@ const tronicalController = require("../controllers/tronicals.controller");
 router.get('/tronicals',tronicalController.findAll);
 
 //Return the details of a tronical
-router.get('/tronicals/:id',tronicalController.findOne);
+router.get('/tronicals/:title',tronicalController.findOne);
 
 module.exports = router;
