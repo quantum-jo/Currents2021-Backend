@@ -1,26 +1,9 @@
-const express = require("express");
-const router = express.Router();
-const Event = require("../models/events.model");
+const router = require('express').Router();
 
-router.get("/",(req,res)=>{
-    Event.find()
-        .then((result)=>{
-            res.json(result);
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
-});
+const eventsController = require('../controllers/events.controller');
 
-router.get("/:id",(req,res)=>{
-    Event.findById(req.params.id)
-        .then((result)=>{
-            res.json(result);
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
+router.get('/',eventsController.findAll);
 
-});
+router.get('/:name',eventsController.findByName);
 
 module.exports = router;
