@@ -6,6 +6,7 @@ exports.findAll = async (req, res) => {
         const team = await Team.find();
         res.status(200).json(team);
     } catch (err) {
+        console.log(err);
         res.status(500).send("Internal Server Error");
     }
 };
