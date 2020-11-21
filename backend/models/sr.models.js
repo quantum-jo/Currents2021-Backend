@@ -12,3 +12,7 @@ const srSchema = new mongoose.Schema({
         type: String
     }
 });
+
+const SR = mongoose.model("sr",srSchema);
+
+module.exports = SR;

@@ -12,3 +12,7 @@ const workshopsSchema = new mongoose.Schema({
         type: String
     }
 });
+
+const Workshops = mongoose.model("workshops",workshopsSchema);
+
+module.exports = Workshops;

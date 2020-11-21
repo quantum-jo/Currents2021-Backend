@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/currents2021");
+mongoose.connect(process.env.DB_URI,
+                dbName: process.env.DB_NAME,
+                user: process.env.DB_USER,
+                password: process.env.DB_PASS);
 
 mongoose.connection.once("open", function(){
   console.log("Connected to Database");

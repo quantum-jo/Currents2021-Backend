@@ -12,3 +12,7 @@ const tronicalsSchema = new mongoose.Schema({
         type: String
     }
 });
+
+const Tronicals = mongoose.model("tronicals",tronicalsSchema);
+
+module.exports = Tronicals;
