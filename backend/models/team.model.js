@@ -8,8 +8,12 @@ const teamSchema = new mongoose.Schema({
     position: {
         type: String,
         required: true
-    }, 
+    },
     image: {
         type: String
     }
 });
+
+const Team = mongoose.model("team",teamSchema);
+
+module.exports = Team;
