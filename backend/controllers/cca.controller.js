@@ -16,9 +16,9 @@ exports.apply = async (req, res) => {
             perm_addr: req.body.perm_addr
         };
 
-        let email = await Cca.find(user.email).limit(1);
+        let foundUser = await Cca.find(user.email).limit(1);
 
-        if (email) 
+        if (foundUser) 
             throw { name: 'UserError', msg: 'Already Exists!'};
         
         await Cca.save(user);
