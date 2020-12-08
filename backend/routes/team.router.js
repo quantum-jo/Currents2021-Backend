@@ -1,5 +1,3 @@
-const router = require("./index.router");
-
 const router = require('express').Router();
 
 //Importing Controllers

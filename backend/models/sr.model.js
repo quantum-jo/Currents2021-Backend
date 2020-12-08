@@ -13,6 +13,4 @@ const srSchema = new mongoose.Schema({
     }
 });
 
-const SR = mongoose.model("sr",srSchema);
-
-module.exports = SR;
+module.exports = mongoose.model('sr', srSchema);

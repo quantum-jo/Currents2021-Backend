@@ -4,10 +4,10 @@ const Team = require('../models/team.model');
 exports.findAll = async (req, res) => {
     try {
         const team = await Team.find();
-        res.status(200).json(team);
+        return res.status(200).json(team);
     } catch (err) {
         console.log(err);
-        res.status(500).send("Internal Server Error");
+        return res.status(500).send("Internal Server Error");
     }
 };
 

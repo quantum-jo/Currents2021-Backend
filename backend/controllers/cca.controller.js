@@ -23,12 +23,12 @@ exports.apply = async (req, res) => {
         
         await Cca.save(user);
         
-        res.status(200).json('Registered!');
+        return res.status(200).json('Registered!');
 
     } catch(err) {
         if (err.name == 'UserError')
-            res.status(409).json(msg);
+            return res.status(409).json(msg);
         else 
-            res.status(400).send("Invalid Details");
+            return res.status(400).send("Invalid Details");
     }
 };

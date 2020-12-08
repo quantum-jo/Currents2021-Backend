@@ -4,7 +4,7 @@ const Tronicals = require('../models/tronicals.model');
 exports.findAll = async (req, res) => {
     try{
         const tronicals = await Tronicals.find();
-        res.status(200).json(tronicals);
+        return res.status(200).json(tronicals);
     } catch (err) {
         res.status(500).json({ error : "Internal Server Error" });
     }
@@ -15,12 +15,12 @@ exports.findOne = async(req, res) => {
     try {
         const tronical = await Tronicals.find({name: req.params['title']});
         if(tronical)
-        res.status(200).json(tronical);
+        return res.status(200).json(tronical);
 
         else
-        res.status(404).json({ error : "Tronical not found" });
+        return res.status(404).json({ error : "Tronical not found" });
     } catch (err) {
-        res.status(500).json({ error : "Internal Server Error" });
+        return res.status(500).json({ error : "Internal Server Error" });
     }
 }
 

@@ -1,13 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DB_URI,
-                dbName: process.env.DB_NAME,
-                user: process.env.DB_USER,
-                password: process.env.DB_PASS);
+const DB_connection = async () => {
+    try {
+        const connection = mongoose.connect(`mongodb://localhost:27017/currents2021`);
+        console.log("connected to mongo db");
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+};
 
-mongoose.connection.once("open", function(){
-  console.log("Connected to Database");
-});
-mongoose.connection.on("error", function(error){
-  console.log("Connection Error:", error);
-});
+module.exports = DB_connection;

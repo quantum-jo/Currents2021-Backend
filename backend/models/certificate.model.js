@@ -19,3 +19,5 @@ const certificateSchema = new mongoose.Schema({
         type: Number
     }
 });
+
+module.exports = mongoose.model('certificate', certificateSchema);

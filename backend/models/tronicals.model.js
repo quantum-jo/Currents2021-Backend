@@ -13,6 +13,5 @@ const tronicalsSchema = new mongoose.Schema({
     }
 });
 
-const Tronicals = mongoose.model("tronicals",tronicalsSchema);
+module.exports = mongoose.model('tronicals',tronicalsSchema);
 
-module.exports = Tronicals;

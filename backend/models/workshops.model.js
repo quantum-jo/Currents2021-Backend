@@ -13,6 +13,5 @@ const workshopsSchema = new mongoose.Schema({
     }
 });
 
-const Workshops = mongoose.model("workshops",workshopsSchema);
+module.exports = mongoose.model('workshops', workshopsSchema);
 
-module.exports = Workshops;

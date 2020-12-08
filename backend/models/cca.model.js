@@ -42,3 +42,5 @@ const CcaSchema = new mongoose.Schema({
         required: true
     }
 });
+
+module.exports = mongoose.model('cca', CcaSchema);

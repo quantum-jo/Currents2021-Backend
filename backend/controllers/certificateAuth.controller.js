@@ -4,7 +4,7 @@ let isInt = (value) => !isNaN(value) && (function(x) { return (x | 0) === x })(p
  
 exports.authenticate = async (req, res) => {
     try {
-        let serialNo = req.body.serialNo;
+        let serialNo = req.params.serialNo;
 
         if (!isInt(serialNo))
             throw { name: 'InvalidNo', msg: 'Invalid Serial Number!' };
@@ -14,14 +14,14 @@ exports.authenticate = async (req, res) => {
         if (!User) 
             throw { name: 'MissingUser', msg: 'No such User exists'};
 
-        res.status(200).json(User);
+        return res.status(200).json(User);
 
     } catch (err) {
         if (err.name == 'InvalidNo') 
-            res.status(400).json(msg);
+            return res.status(400).json(msg);
 
         if (err.namme == 'MissingUser') 
-            res.status(409).json(msg);
+            return res.status(409).json(msg);
     }
         
 };
