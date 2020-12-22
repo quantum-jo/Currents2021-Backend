@@ -2,11 +2,17 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const DB_connection = require('./config/db.config');
+const DB_config = require('./config/db.config');
 
-dotenv.config();
-DB_connection();
+mongoose.connect(`mongodb+srv://${DB_config.DB_username}:${DB_config.DB_password}@prakhi.jpsfe.mongodb.net/${DB_config.DB_name}?retryWrites=true&w=majority`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => {
+    console.log("Connected to MongoDB");
+})
+.catch((err) => console.log(err));
+
 
 const routes = require('./routes/index.router.js');
 app.use(express.json());

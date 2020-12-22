@@ -1,14 +1,32 @@
 const mongoose = require('mongoose');
 
 const workshopsSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: true
     },
-    description: {
+    desc: {
         type: String
     },
-    image: {
+    long_desc: {
+        type: String
+    },
+    date: {
+        type: Date
+    },
+    prize: {
+        type: Number
+    },
+    img: {
+        type: String
+    },
+    poster: {
+        type: String
+    },
+    reg_link: {
+        type: String
+    },
+    rule_link: {
         type: String
     }
 });
