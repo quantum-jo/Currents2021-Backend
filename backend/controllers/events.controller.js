@@ -12,8 +12,8 @@ exports.findAll = async (req, res) => {
 
 exports.findByName = async (req, res) => {
     try {
-        const events = await Events.find({ name:req.params.name });
-        if(events)
+        const events = await Events.find({ title:req.params.title });
+        if(events.title === req.params.title)
         return res.status(200).json(events);
         else
          return res.status(404).json({ error : "Event  not found" });

@@ -13,10 +13,9 @@ exports.findAll = async (req, res) => {
 //Returns the detail of a tronical
 exports.findOne = async(req, res) => {
     try {
-        const tronical = await Tronicals.find({name: req.params['title']});
-        if(tronical)
+        const tronical = await Tronicals.find({ title: req.params['title'] });
+        if(tronical.title === req.params.title)
         return res.status(200).json(tronical);
-
         else
         return res.status(404).json({ error : "Tronical not found" });
     } catch (err) {

@@ -13,8 +13,8 @@ exports.findAll = async (req, res) => {
 //Return the details of specific workshops
 exports.findOne = async (req, res) => {
     try{
-        const workshop = await Workshops.find({name: req.params.title});
-        if(workshop) 
+        const workshop = await Workshops.findOne({title: req.params.title});
+        if(workshop.title === req.params.title) 
             return res.status(200).json(workshop);
         else 
             return res.status(200).json("Workshop not found");       
