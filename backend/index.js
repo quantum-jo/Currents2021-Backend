@@ -18,5 +18,5 @@ const routes = require('./routes/index.router.js');
 app.use(express.json());
 app.use(routes);
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Listening to port: ${port}`));
