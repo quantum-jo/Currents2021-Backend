@@ -12,7 +12,7 @@ exports.findAll = async (req, res) => {
 
 exports.findByName = async (req, res) => {
     try {
-        const events = await Events.find({ name:req.params.name });
+        const events = await Events.find({ title:req.params.name });
         if(events)
         return res.status(200).json(events);
         else
