@@ -5,9 +5,9 @@ const router = express.Router();
 const workshopsController = require("../controllers/workshops.controller");
 
 //Return a list of workshops
-router.get('/workshops', workshopsController.findAll);
+router.get('/', workshopsController.findAll);
 
 //Return details of specific workshop
-router.get('/workshops/:title', workshopsController.findOne);
+router.get('/:title', workshopsController.findOne);
 
 module.exports = router;

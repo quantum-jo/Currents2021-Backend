@@ -4,6 +4,6 @@ const eventsController = require('../controllers/events.controller');
 
 router.get('/',eventsController.findAll);
 
-router.get('/:name',eventsController.findByName);
+router.get('/:title',eventsController.findByName);
 
 module.exports = router;
