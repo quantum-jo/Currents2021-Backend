@@ -14,11 +14,11 @@ exports.findAll = async (req, res) => {
 exports.findOne = async (req, res) => {
     try{
         const workshop = await Workshops.find({title: req.params.title});
-        if(workshop.title === req.params.title) 
-            return res.status(200).json(workshop);
+        if (workshop.length)
+            return res.status(200).json(workshop[0]);
         else 
-            return res.status(200).json("Workshop not found");       
-    }catch (err) {
+            return res.status(404).json({ error: "Event not found" });
+    } catch (err) {
         return res.status(500).json("Internal Server Error");
     }
 };

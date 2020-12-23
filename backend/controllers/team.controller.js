@@ -7,7 +7,7 @@ exports.findAll = async (req, res) => {
         return res.status(200).json(team);
     } catch (err) {
         console.log(err);
-        return res.status(500).send("Internal Server Error");
+        return res.status(500).json({ error: "Internal Server Error" });
     }
 };
 

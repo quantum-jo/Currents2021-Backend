@@ -14,10 +14,10 @@ exports.findAll = async (req, res) => {
 exports.findOne = async(req, res) => {
     try {
         const tronical = await Tronicals.find({ title: req.params['title'] });
-        if(tronical.title === req.params.title)
-        return res.status(200).json(tronical);
+        if(tronical.length)
+            return res.status(200).json(tronical[0]);
         else
-        return res.status(404).json({ error : "Tronical not found" });
+            return res.status(404).json({ error : "Tronical not found" });
     } catch (err) {
         return res.status(500).json({ error : "Internal Server Error" });
     }
