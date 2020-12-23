@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
+var cors = require('cors');
 const mongoose = require('mongoose');
 const DB_config = require('./config/db.config');
 
@@ -16,8 +16,9 @@ mongoose.connect(`mongodb+srv://${DB_config.DB_username}:${DB_config.DB_password
 
 const routes = require('./routes/index.router.js');
 app.use(express.json());
-app.use(routes);
 app.use(cors());
+app.use(routes);
+
 
 let port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Listening to port: ${port}`));
