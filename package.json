@@ -4,7 +4,7 @@
   "description": "Official Code for Currents 2021",
   "main": "index.js",
   "scripts": {
-    "start": "npm ./backend/index.js",
+    "start": "index.js",
     "dev": "nodemon ./backend/index.js"
   },
   "repository": {
