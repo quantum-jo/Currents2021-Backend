@@ -17,6 +17,7 @@ mongoose.connect(`mongodb+srv://${DB_config.DB_username}:${DB_config.DB_password
 const routes = require('./routes/index.router.js');
 app.use(express.json());
 app.use(routes);
+app.use(cors());
 
 let port = process.env.PORT || 3001;
 app.listen(port, () => console.log(`Listening to port: ${port}`));
