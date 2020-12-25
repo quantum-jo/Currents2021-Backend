@@ -14,7 +14,7 @@ const workshopsSchema = new mongoose.Schema({
     date: {
         type: Date
     },
-    prize: {
+    price: {
         type: Number
     },
     img: {
