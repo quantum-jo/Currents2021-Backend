@@ -17,6 +17,9 @@ const workshopsSchema = new mongoose.Schema({
     price: {
         type: Number
     },
+    members_no: {
+        type: Number
+    },
     img: {
         type: String
     },
