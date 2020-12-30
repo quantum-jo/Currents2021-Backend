@@ -13,4 +13,4 @@ const gallerySchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('events', gallerySchema);
+module.exports = mongoose.model('gallerys', gallerySchema);

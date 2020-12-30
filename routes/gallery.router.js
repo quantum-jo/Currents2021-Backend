@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const eventsController = require('../controllers/gallery.controller');
+const galleryController = require('../controllers/gallery.controller');
 
-router.get('/',eventsController.findAll);
+router.get('/', galleryController.findAll);
 
 module.exports = router;
