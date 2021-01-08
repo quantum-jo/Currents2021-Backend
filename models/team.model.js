@@ -11,7 +11,13 @@ const teamSchema = new mongoose.Schema({
     },
     image: {
         type: String
+    },
+    facebook: {
+        type: String
+    },
+    instagram: {
+        type: String
     }
 });
 
-module.exports = mongoose.model('team', teamSchema);
+module.exports = mongoose.model('teams', teamSchema);
