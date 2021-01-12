@@ -1,14 +1,18 @@
 const mongoose = require('mongoose');
 
 const tronicalsSchema = new mongoose.Schema({
-    name: {
-        type: String,
+    volume_no: {
+        type: Number,
         required: true
     },
-    description: {
-        type: String
+    issue_no: {
+        type: Number,
+        required: true
     },
     image: {
+        type: String
+    }, 
+    file_link: {
         type: String
     }
 });
