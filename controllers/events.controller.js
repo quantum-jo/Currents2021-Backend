@@ -2,7 +2,6 @@ const Events = require('../models/events.model');
 
 exports.findAll = async (req, res) => {
     try{
-        console.log("inside findall events function");
         const events = await Events.find();
         return res.status(200).json(events);
     } catch (err) {
