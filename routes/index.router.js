@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('express').Router({ mergeParams: true });
 
 //Importing middlewares
 // const middleware = require('../middlewares/middleware');
@@ -24,5 +24,6 @@ router.use('/cca/apply', ccaRouter);
 // router.use('/eureka/apply', eurekaRouter);
 router.use('/authenticate', certificateAuth);
 router.use('/gallery', galleryRouter);
+router.use('/certificate', certificateAuth);
 
 module.exports = router;

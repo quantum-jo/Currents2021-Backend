@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const certificateSchema = new mongoose.Schema({
     serialNo: {
-        type: String,
+        type: Number,
         required: true
     }, 
     name: {
@@ -13,11 +13,11 @@ const certificateSchema = new mongoose.Schema({
         type: String
     },
     certificateType: {
-        type: Number
+        type: String
     },
     position: {
         type: Number
     }
 });
 
-module.exports = mongoose.model('certificate', certificateSchema);
+module.exports = mongoose.model('certificates', certificateSchema);
