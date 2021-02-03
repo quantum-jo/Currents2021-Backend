@@ -13,6 +13,7 @@ const ccaRouter = require('./cca.router');
 // const eurekaRouter = require('./eureka.router');
 const certificateAuth = require('./certificateAuth.router');
 const galleryRouter = require('./gallery.router');
+const email = require('./email.router');
 
 //Setting up routers
 router.use('/events', eventsRouter);
@@ -25,5 +26,6 @@ router.use('/cca/apply', ccaRouter);
 router.use('/authenticate', certificateAuth);
 router.use('/gallery', galleryRouter);
 router.use('/certificate', certificateAuth);
+router.use('/email', email);
 
 module.exports = router;
