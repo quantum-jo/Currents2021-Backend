@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 
   const mailOptions = {
     from: '"Currents WebOps" <currents.webops@gmail.com>',
-    to: 'eee.currents@gmail.com',
+    to: 'prakharsingh242@gmail.com',
     subject: `Contact Us Form - Mail Notif`,
     text: `Name: ${name} \n Email: ${email} \n Institute: ${institute} \n  Message: ${message} `
   };
