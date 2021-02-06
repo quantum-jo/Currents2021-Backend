@@ -4,7 +4,7 @@ var cors = require('cors');
 const mongoose = require('mongoose');
 const DB_config = require('./config/db.config');
 
-mongoose.connect(`mongodb+srv://${DB_config.DB_username}:${DB_config.DB_password}@prakhi.jpsfe.mongodb.net/${DB_config.DB_name}?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${DB_config.DB_username}:${DB_config.DB_password}@currents-21.4xyln.mongodb.net/${DB_config.DB_name}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
