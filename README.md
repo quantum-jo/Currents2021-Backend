@@ -1,7 +1,7 @@
 # Currents2021
 Official Backend Repo for Currents 2021
 
-Portal Link: [www.currents.nitt.edu](www.currents.nitt.edu)
+Portal Link: [Currents Website](https://www.currents.nitt.edu)
 
 #### Installation
 - Clone / Download this repository.
